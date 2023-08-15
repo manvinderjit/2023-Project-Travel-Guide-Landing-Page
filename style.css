@@ -1,5 +1,7 @@
-* {
-   
+:root {
+   --color-background-elements: rgb(256, 69, 0, 0.8);
+   --color-background-elements-light: rgb(256, 256, 256);
+   --color-headings-dark: rgb(256, 69, 0);
 }
 
 body {
@@ -7,6 +9,7 @@ body {
     margin: 0 auto;
     padding: 0;
     max-width: 1920px;    
+    background-color: #f1f1f1;
 }
 
 header {    
@@ -25,7 +28,7 @@ header .background-image {
 }
 
 header h1 {
-    background-color: rgb(256, 69, 0, 0.8);    
+    background-color: var(--color-background-elements);
     color: rgb(256, 256, 256, 1);
     text-align: center;
     margin-top: 0;
@@ -43,48 +46,72 @@ header h1 {
     
 }
 
-.top-navigation {
+.top-navigation {    
     background-color: rgb(256, 256, 256, 0.6);    
 }
 
 .top-navigation ul { 
     display: flex;
     justify-content: space-evenly;
-    color: orangered;
+    color: var(--color-headings-dark);
     padding: 0.5rem 0;    
     font-weight: 500;
     font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-headings-dark);
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: var(--color-headings-dark);
+    color: var(--color-background-elements-light);    
 }
 
 ul {
     list-style: none;
 }
 
-.section-info-cards {    
-    margin-top: -5rem;
+.section-info-cards {        
     display: flex;
     justify-content: space-evenly;
-
+}
+.section-info-cards {
+    margin-top: -5rem;
 }
 
-.section-info-cards > div {    
+.section-info-cards > div , .card-tourist-attraction {    
     border-radius: 6px;
     width: 350px;
-    height: 450px;
-    background-color: wheat;
+    height: 450px;    
     display: grid;
     grid-template-rows: 3fr 2fr;
+    background-color: var(--color-background-elements-light);
 }
 
 .info-card-img {
     border-radius: 6px;
 }
 
-.info-card-text {
-    background-color: bisque;        
-    border-radius: 6px;
+img {
+    width: 350px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
+.info-card-text {             
+    border-radius: 6px;
+    padding: 0.5rem;    
+    color: #828282;
+}
+
+h3 {    
+    margin: 0;
+    color: var(--color-headings-dark);
+    text-align: center;
+}
 
 article {
     margin-top: 3rem;
@@ -99,29 +126,63 @@ p {
     text-align: justify;
 }
 
-.section-brief-intro {
-    background-color: rgb(256, 69, 0, 0.8);
-    color: white;
-    
+.section-brief-intro, .section-local-cuisine {
+    background-color: var(--color-background-elements);
+    color: white;    
+    text-align: center;
 }
 
 .section-tourist-attractions {
-    
+    display: flex;
+    flex-direction: column;
 }
 
-.section-tourist-attractions > h2 {
-    color: orangered;
+.section-tourist-attractions > h2 , .section-accomodation > h2{
+    color: var(--color-headings-dark);
     text-align: center;
 }
 
 .wrapper-tourist-attractions {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;    
+}
+
+.card-tourist-attraction {    
+    width: 350px;
+    height: 450px;
+}
+
+.section-local-cuisine {
+    margin-top: 3rem;
     
 }
 
-.card-tourist-attraction {
-    border: 1px solid black;
-    width: 350px;
-    height: 450px;
+.wrapper-local-cuisine {
+    display: grid;    
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);    
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.card-local-cuisine {
+    width: 550px;
+    height: 400px;
+    justify-self: center;
+    background-color: var(--color-background-elements-light);
+    border-radius: 6px;
+}
+
+
+
+footer {
+    background-color: var(--color-background-elements);
+    color: var(--color-background-elements-light);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3rem;
+    height: 3rem;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
