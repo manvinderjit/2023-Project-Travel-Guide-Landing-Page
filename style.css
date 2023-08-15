@@ -1,0 +1,127 @@
+* {
+   
+}
+
+body {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;    
+}
+
+header {    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* align-items: center; */
+    
+}
+
+header .background-image {
+    background-image: url(./images/toronto2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;    
+}
+
+header h1 {
+    background-color: rgb(256, 69, 0, 0.8);    
+    color: rgb(256, 256, 256, 1);
+    text-align: center;
+    margin-top: 0;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;    
+    padding: 0.5rem 0;
+    max-width: 1920px;
+    margin: auto;
+    /* margin-top: -.5em;
+    text-align: center;
+    order: 1;
+    flex: 1 0 auto; */
+    
+}
+
+.top-navigation {
+    background-color: rgb(256, 256, 256, 0.6);    
+}
+
+.top-navigation ul { 
+    display: flex;
+    justify-content: space-evenly;
+    color: orangered;
+    padding: 0.5rem 0;    
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-info-cards {    
+    margin-top: -5rem;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.section-info-cards > div {    
+    border-radius: 6px;
+    width: 350px;
+    height: 450px;
+    background-color: wheat;
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+}
+
+.info-card-img {
+    border-radius: 6px;
+}
+
+.info-card-text {
+    background-color: bisque;        
+    border-radius: 6px;
+}
+
+
+article {
+    margin-top: 3rem;
+}
+
+section {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.section-brief-intro {
+    background-color: rgb(256, 69, 0, 0.8);
+    color: white;
+    
+}
+
+.section-tourist-attractions {
+    
+}
+
+.section-tourist-attractions > h2 {
+    color: orangered;
+    text-align: center;
+}
+
+.wrapper-tourist-attractions {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    
+}
+
+.card-tourist-attraction {
+    border: 1px solid black;
+    width: 350px;
+    height: 450px;
+}
