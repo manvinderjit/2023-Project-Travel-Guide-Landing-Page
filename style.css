@@ -14,52 +14,7 @@ body {
     background-color: var(--color-body-background);
 }
 
-header {    
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* align-items: center; */
-    
-}
-
-header .background-image {
-    background-image: url(./images/toronto2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 600px;    
-}
-
-header h1 {
-    background-color: var(--color-background-elements);
-    color: rgb(256, 256, 256, 1);
-    text-align: center;
-    margin-top: 0;
-    position: absolute;
-    top: 300px;
-    left: 0;
-    right: 0;    
-    padding: 0.5rem 0;
-    max-width: 1920px;
-    margin: auto;
-    /* margin-top: -.5em;
-    text-align: center;
-    order: 1;
-    flex: 1 0 auto; */
-    
-}
-
-.top-navigation {    
-    background-color: var(--color-background-elements-light)    
-}
-
-.top-navigation ul { 
-    display: flex;
-    justify-content: space-evenly;
-    color: var(--color-headings-dark);
-    padding: 0.5rem 0;    
-    font-weight: 500;
-    font-size: 1.2rem;
-}
+/* Universal Elements */
 
 a {
     text-decoration: none;
@@ -68,13 +23,96 @@ a {
 
 a:hover {
     text-decoration: none;
-    background-color: var(--color-headings-dark);
+    background-color: var(--color-background-elements);
     color: var(--color-background-elements-light);    
 }
 
 ul {
     list-style: none;
 }
+
+h3 {    
+    margin: 0;
+    color: var(--color-headings-dark);
+    text-align: center;
+}
+
+article {
+    margin-top: 3rem;
+}
+
+section {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    width: 350px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+header {    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* Header: Navigation */
+
+.wrapper-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-background-elements-light)    
+}
+
+.wrapper-navigation h2 {
+    color: var(--color-headings-dark);
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+.top-navigation ul { 
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    color: var(--color-headings-dark);
+    padding: 0.5rem 0;    
+    font-weight: 500;
+    font-size: 1.2rem;    
+    margin: 0;    
+}
+
+.top-navigation ul li a {   
+    padding: 1rem;    
+}
+
+/* Header Image */
+
+header .background-image {
+    background-image: url(./images/toronto2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    background-color: var(--color-background-elements);
+    color: rgb(256, 256, 256, 1);
+    text-align: center;
+    padding: 0.5rem 0;
+    width: 1920px;
+}
+
+/* Main Section Information Cards */
 
 .section-info-cards {        
     display: flex;
@@ -97,36 +135,13 @@ ul {
     border-radius: 6px;
 }
 
-img {
-    width: 350px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
 .info-card-text {             
     border-radius: 6px;
     padding: 0.5rem;    
     color: var(--color-paragraph-text);
 }
 
-h3 {    
-    margin: 0;
-    color: var(--color-headings-dark);
-    text-align: center;
-}
-
-article {
-    margin-top: 3rem;
-}
-
-section {
-    margin: 1rem 0;
-    padding: 1rem 2rem;
-}
-
-p {
-    text-align: justify;
-}
+/* Main Article Section: Brief Intro */
 
 .section-brief-intro > * {
     width: 1420px;
@@ -139,6 +154,8 @@ p {
     color: var(--color-background-elements-light);    
     text-align: center;
 }
+
+/* Main Article Section: Tourist Attractions */
 
 .section-tourist-attractions {
     display: flex;
@@ -156,6 +173,8 @@ p {
     margin-top: 1rem;    
 }
 
+/* Main Article Section: Local Cuisines */
+
 .section-local-cuisine {
     margin-top: 3rem;    
 }
@@ -170,10 +189,11 @@ p {
 }
 
 .card-local-cuisine {    
-    height: 300px;    
+    height: 297px;    
     border-radius: 6px;
     display: grid;    
     gap: 1rem;    
+    overflow: hidden;
 }
 
 .card-local-cuisine > div > h3 {
@@ -204,7 +224,7 @@ p {
 }
 
 .card-lower-cuisine img , .card-upper-cuisine img {
-    border-radius: 6px;    
+    border-radius: 6px;            
 }
 
 .card-local-cuisine > * , .card-upper-cuisine > * {
@@ -212,6 +232,44 @@ p {
     height: 297px;
     border-radius: 6px;    
 }
+
+/* Main Article Section: Accomodations*/
+
+.section-accomodation p {
+    width: 1420px;
+    margin: auto;
+    color: var(--color-paragraph-text);
+    padding: 0 0 1rem 0;
+}
+
+.wrapper-accomodation { 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-accomodation {
+    border-radius: 6px;
+    width: 350px;
+    height: 450px;    
+    background-color: var(--color-background-elements-light);
+    display: flex;    
+    flex-direction: column;
+    padding-top: 1rem;    
+    gap: 1rem;
+}
+
+.card-accomodation img {    
+    height: 250px;
+    border-radius: 0;
+}
+
+.card-accomodation p {
+    max-width: 320px;
+    padding: 0 1rem;
+    text-align: justify;
+}
+
+/* Footer */
 
 footer {
     background-color: var(--color-background-elements);
